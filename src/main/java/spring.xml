@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+    default-init-method="start"
+>
+
+	<bean id="circle" class="com.ssi.Circle">
+		<constructor-arg value="20"/>
+	</bean>
+	
+	<bean id="circleUser" class="com.ssi.CircleUser">
+		<constructor-arg ref="circle"/>
+	</bean>
+
+
+
+<!-- 
+	<bean id="d1" class="com.ssi.Demo">
+		<property name="x" value="10" />
+		<property name="y" value="10" />
+	</bean>
+
+	<bean id="t1" class="com.ssi.Test">
+		<property name="p" value="15" />
+		<property name="q" value="25" />
+	</bean>
+	
+	<bean class="com.ssi.MyPostProcessor"/> -->
+	
+</beans>
+
